@@ -1,0 +1,38 @@
+
+.greetBox{
+    background-color: #0000008e;
+    height:350px;
+    padding:20px 30px;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px 6px #000000e0;
+    border-radius: 20px;
+}
+
+.greeting h2{
+    font-size: 52px;
+    position:relative;
+}
+.greeting h2::after{
+   content:"";
+   bottom:0;
+   left:0;
+   position:absolute;
+   width:300px;
+   border:1.5px solid #fff;
+}
+.greeting h2 .icon{
+    margin-left:60px;
+    transition: color 0.3s;
+}
+.greeting h2 .icon:hover{
+    /* margin-left:60px; */
+    color:#ff2c1d;
+}
+
+.greetBox .cTime{
+    font-size: 35px;
+    color:#ff781f;
+}
+.greetBox .cDate{
+    font-size: 35px;
+}

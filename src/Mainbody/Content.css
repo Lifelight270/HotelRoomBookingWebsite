@@ -1,0 +1,29 @@
+.content{
+    background:linear-gradient(to right, rgba(19, 19, 19, 0.726),rgba(0, 0, 0, 0.582) , rgba(0, 0, 0, 0.356)),
+    url("../image/Houghton-Hotel.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:100%;
+    background-attachment: fixed;
+    height: 580px;
+    color:#fff;
+}
+/* .box{
+    border:2px solid blue;
+    height: 100%;
+} */
+.box .ttl{
+color:#ff781f;
+font-size:58px;
+font-weight: 700;
+padding:10px 0;
+}
+.box .fp{
+    font-size:25px;
+}
+
+.box p{
+    font-size:22px;
+    color:#fff;
+    letter-spacing:1.5px ;
+}

@@ -1,0 +1,25 @@
+
+.room img{
+    height:100px;
+    width:150px;
+}
+
+.room .room-box{
+    background-color: #a1a1a167;
+    box-sizing: border-box;
+    box-shadow: 0 0 3px 2px #bbbbbb;
+}
+.room button{
+    border: none;
+    background-color: #ff781f;
+    color:#fff;
+    font-weight: 400;
+    padding:4px 14px;
+    transition: 0.7s;
+    border-radius:5px ;
+}
+
+.room button:hover{
+    background-color: #fff;
+    color:#ff781f;
+}

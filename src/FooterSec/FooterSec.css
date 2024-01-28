@@ -1,0 +1,48 @@
+.footr{
+overflow:hidden;
+background-color:black;
+font-size: 15px;
+line-height: -1.2;   
+
+}
+
+
+.foot_box h2{
+    position: relative;
+    margin-bottom: 20px;
+    font-size: 22px;
+    color:#ff781f;
+     
+}
+.foot_box h2::after{
+    content:"";
+    position:absolute;
+    border-bottom: 2px solid #edf5e1;
+    top:-100px;
+    left:0;
+    width:200px;
+    height:140px;
+}
+.Icons i{
+    padding:10px;
+    font-size: 45px;
+    cursor: pointer;
+    transition: 0.5s ease-in;
+}
+.Icons i:hover{
+    color:#ff781f;
+    transition: 0.5s ease-out;
+}
+
+.Contact i{
+    padding-right:10px;
+}
+
+
+.img-box img{
+    /* border:2px solid red; */
+    height:40px;
+    margin:10px;
+
+
+}

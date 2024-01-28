@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reset password</title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height:100vh;
+        overflow: hidden;
+        background-color: #ff781f;
+        color:#fff;
+        font-size: 20px;
+        font-weight: 400;
+    }
+    .new-pass{
+        padding:5px 20px;
+        padding-bottom: 28px;
+        background-color: #000000b4;
+       
+    }
+    .new-pass p{
+        border-bottom: 2px solid #fff;
+       padding-bottom: 10px;
+        color:#ff9046;
+       
+    }
+     .new-pass form{
+        display: flex;
+        flex-direction: column;
+       
+          
+     }
+     .new-pass form label{
+        margin-top:10px;
+          
+     }
+     .new-pass form input{
+        height:30px;
+          
+     }
+     .new-pass form hr{
+       width:100%;
+       margin-top:20px;
+          
+     }
+     .new-pass form button{
+        margin-top: 10px;
+        border:none;
+        outline: none;
+        padding: 10px 5px;
+        font-size: 20px;
+        background-color:#ff781f;
+        color:#fff;
+        transition: 0.5s ease-in-out;
+     }
+     .new-pass form button:hover{
+        
+       color:#ff781f;
+       background-color:#fff;
+     }
+    
+</style>
+<body>
+    <!-- <h1><%=email%></h1> -->
+  <div class="new-pass">
+    <p>Please Enter your New password</p>
+    <form action="" method="POST">
+        
+            <label>New Passwrod</label>
+            <input type="password" id="password" name="password">
+            
+            <label>Confirm New Passwrod</label>
+            <input type="password"  id="confirmPassword "name="confirmPassword">
+           <hr/>
+           <button type="submit">Submit</button>
+    </form>
+   </div>
+</body>
+</html>

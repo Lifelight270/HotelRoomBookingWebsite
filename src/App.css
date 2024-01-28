@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600&display=swap');
+#root {
+  color:  #fff;
+  font-size: 20px;
+  font-family: 'Abhaya Libre', serif;
+  letter-spacing: 1.5px;
+}
+nav .active {
+ color:#fff;
+}
+a{
+  color:#ff781f;
+  transition: 0.2s ease-in;
+  position:relative;
+  transition: color 0.3s;
+
+}
+
+a:hover{
+color:#ffffff;
+/* border-bottom: 2px solid red; */
+
+}
+a::after{
+  content:"";
+  bottom:0;
+  left:0;
+  border-bottom: 2px solid #fff;
+  position:absolute;
+  width:0;
+  transition:width 0.3s;
+
+}
+a:hover::after{
+  width:100%;
+}
+
+/* App.css or your CSS file */
+.booking-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.booking-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
