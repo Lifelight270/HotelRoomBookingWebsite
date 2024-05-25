@@ -15,8 +15,9 @@ app.use(express.json());
 app.use(bodyParser.json());
 app.set("view engine", "ejs");
 
+// .connect("mongodb://127.0.0.1:27017/roomBookingSystem", {
 mongoose
-  .connect("mongodb://127.0.0.1:27017/roomBookingSystem", {
+  .connect("mongodb+srv://lightlife908:lightlife908@cluster0.3dnyipx.mongodb.net/roomBookingSystem", {
     useUnifiedTopology: true,
     useNewUrlParser: true,
   })
