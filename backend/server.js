@@ -24,7 +24,7 @@ app.get("/",(req,res)=>{
 
 
 const SECRET_KEY = "rT9$wL2*pZvQ5!sY8@cX1#nG4&mU7";
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 app.use(cors());
 app.use(express.json());
