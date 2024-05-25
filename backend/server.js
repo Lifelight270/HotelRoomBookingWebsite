@@ -6,6 +6,22 @@ const bcrypt = require("bcrypt");
 const nodemailer = require("nodemailer");
 const jwt = require("jsonwebtoken");
 const mongoose = require("mongoose");
+const path = require ('path');
+
+// const __dirname = path.resolve();
+
+app.use(express.static(path.join(__dirname,"../dist")));
+
+app.get("*",(req,res)=>{
+  res.sendFile(path.resolve(__dirname,"../dist","index.html"))
+})
+
+
+app.get("/",(req,res)=>{
+  res.send("api is running successfully")
+})
+
+
 
 const SECRET_KEY = "rT9$wL2*pZvQ5!sY8@cX1#nG4&mU7";
 const port = 5000;
@@ -14,6 +30,8 @@ app.use(cors());
 app.use(express.json());
 app.use(bodyParser.json());
 app.set("view engine", "ejs");
+
+
 
 // .connect("mongodb://127.0.0.1:27017/roomBookingSystem", {
 mongoose
