@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const app = express();
@@ -6,22 +7,19 @@ const bcrypt = require("bcrypt");
 const nodemailer = require("nodemailer");
 const jwt = require("jsonwebtoken");
 const mongoose = require("mongoose");
-const path = require ('path');
+const path = require("path");
 
 // const __dirname = path.resolve();
 
-app.use(express.static(path.join(__dirname,"../dist")));
+app.use(express.static(path.join(__dirname, "../dist")));
 
-app.get("*",(req,res)=>{
-  res.sendFile(path.resolve(__dirname,"../dist","index.html"))
-})
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "../dist", "index.html"));
+});
 
-
-app.get("/",(req,res)=>{
-  res.send("api is running successfully")
-})
-
-
+app.get("/", (req, res) => {
+  res.send("api is running successfully");
+});
 
 const SECRET_KEY = "rT9$wL2*pZvQ5!sY8@cX1#nG4&mU7";
 const port = process.env.PORT || 5000;
@@ -31,14 +29,15 @@ app.use(express.json());
 app.use(bodyParser.json());
 app.set("view engine", "ejs");
 
-
-
 // .connect("mongodb://127.0.0.1:27017/roomBookingSystem", {
 mongoose
-  .connect("mongodb+srv://lightlife908:lightlife908@cluster0.3dnyipx.mongodb.net/roomBookingSystem", {
-    useUnifiedTopology: true,
-    useNewUrlParser: true,
-  })
+  .connect(
+    "mongodb+srv://lightlife908:lightlife908@cluster0.3dnyipx.mongodb.net/roomBookingSystem",
+    {
+      useUnifiedTopology: true,
+      useNewUrlParser: true,
+    }
+  )
   .then(() => {
     console.log("Connection with mongodb is succussful");
   })
