@@ -10,6 +10,8 @@ const mongoose = require("mongoose");
 const path = require("path");
 
 // const __dirname = path.resolve();
+const password = "mypassword@123";
+const encodedPassword = encodeURIComponent(password);
 
 app.use(express.static(path.join(__dirname, "../dist")));
 
@@ -32,7 +34,7 @@ app.set("view engine", "ejs");
 // .connect("mongodb://127.0.0.1:27017/roomBookingSystem", {
 mongoose
   .connect(
-    "mongodb+srv://lightlife908:lightlife908@cluster0.3dnyipx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+    `mongodb+srv://lightlife908:${encodedPassword}@cluster0.3dnyipx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`
   )
   .then(() => {
     console.log("Connection with mongodb is succussful");
