@@ -17,7 +17,7 @@ const LogIn = () => {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:5000/forgot-password", {
+      await axios.post("https://hotelroombookingwebsite.onrender.com/forgot-password", {
         email: forgotPasswordEmail,
       });
 
@@ -42,7 +42,7 @@ const LogIn = () => {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:5000/login", credentials);
+      await axios.post("https://hotelroombookingwebsite.onrender.com/login", credentials);
 
       console.log("Login successful");
       alert("Successfully logged in");
@@ -61,8 +61,7 @@ const LogIn = () => {
                 {forgotPasswordMode ? (
                   <form
                     className="forget-form"
-                    onSubmit={handleForgotPasswordSubmit}
-                  >
+                    onSubmit={handleForgotPasswordSubmit}>
                     <h2 className="text-center">Forgot Password</h2>
                     <div className="forget-email">
                       <label htmlFor="forgotPasswordEmail">Email</label>
@@ -117,8 +116,7 @@ const LogIn = () => {
                           className="login-btn"
                           onClick={() =>
                             setForgotPasswordMode((prevMode) => !prevMode)
-                          }
-                        >
+                          }>
                           {forgotPasswordMode
                             ? "Back to Login"
                             : "Forgot Password"}

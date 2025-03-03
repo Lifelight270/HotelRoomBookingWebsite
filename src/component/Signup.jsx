@@ -26,8 +26,11 @@ const Signup = () => {
       alert("password donot match");
       return;
     }
-    try { 
-      await axios.post("http://localhost:5000/api/signusers", signData);
+    try {
+      await axios.post(
+        "https://hotelroombookingwebsite.onrender.com/api/signusers",
+        signData
+      );
 
       console.log("Data posted successfully");
       alert("successfully submitted");
