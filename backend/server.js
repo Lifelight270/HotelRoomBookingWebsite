@@ -31,7 +31,9 @@ app.set("view engine", "ejs");
 
 // .connect("mongodb://127.0.0.1:27017/roomBookingSystem", {
 mongoose
-  .connect("mongodb://127.0.0.1:27017/roomBookingSystem")
+  .connect(
+    "mongodb+srv://lightlife908:<db_password>@cluster0.3dnyipx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+  )
   .then(() => {
     console.log("Connection with mongodb is succussful");
   })
@@ -162,9 +164,6 @@ app.post("/reset-password/:id/:token", async (req, res) => {
   }
 });
 
-
-
-
 app.post("/api/users", async (req, res) => {
   try {
     const { name, email, address, city, startDate, endDate } = req.body;
@@ -222,10 +221,8 @@ app.post("/login", async (req, res) => {
 
 app.get("/", (req, res) => {
   res.send("server is running in 5000");
-
 });
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
-  
 });
