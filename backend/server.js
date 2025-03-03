@@ -32,7 +32,7 @@ app.set("view engine", "ejs");
 // .connect("mongodb://127.0.0.1:27017/roomBookingSystem", {
 mongoose
   .connect(
-    "mongodb+srv://lightlife908:<db_password>@cluster0.3dnyipx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+    "mongodb+srv://lightlife908:lightlife908@cluster0.3dnyipx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
   )
   .then(() => {
     console.log("Connection with mongodb is succussful");
