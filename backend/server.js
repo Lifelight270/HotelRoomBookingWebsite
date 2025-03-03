@@ -31,13 +31,7 @@ app.set("view engine", "ejs");
 
 // .connect("mongodb://127.0.0.1:27017/roomBookingSystem", {
 mongoose
-  .connect(
-    "mongodb+srv://lightlife908:lightlife908@cluster0.3dnyipx.mongodb.net/roomBookingSystem",
-    {
-      useUnifiedTopology: true,
-      useNewUrlParser: true,
-    }
-  )
+  .connect("mongodb://127.0.0.1:27017/roomBookingSystem")
   .then(() => {
     console.log("Connection with mongodb is succussful");
   })
@@ -80,7 +74,7 @@ const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
     user: "lightlife908@gmail.com",
-    pass: "xtvp hqma llxx jpwg",
+    pass: "cjbf pwxu fspi moeh",
   },
 });
 
@@ -168,9 +162,8 @@ app.post("/reset-password/:id/:token", async (req, res) => {
   }
 });
 
-app.get("/", (req, res) => {
-  res.send("server is running in 5000");
-});
+
+
 
 app.post("/api/users", async (req, res) => {
   try {
@@ -227,6 +220,12 @@ app.post("/login", async (req, res) => {
   }
 });
 
+app.get("/", (req, res) => {
+  res.send("server is running in 5000");
+
+});
+
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
+  
 });

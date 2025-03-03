@@ -51,10 +51,6 @@ const LogIn = () => {
       alert("Error occurred");
     }
   };
-
-  // const toggleSignupForm = () => {
-  //   setShowSignup((prevShowSignup) => !prevShowSignup);
-  // };
   return (
     <>
       <div className="login">

@@ -26,7 +26,7 @@ const Signup = () => {
       alert("password donot match");
       return;
     }
-    try {
+    try { 
       await axios.post("http://localhost:5000/api/signusers", signData);
 
       console.log("Data posted successfully");
